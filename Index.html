@@ -17,7 +17,7 @@
     var UP_KEY = 38;
     var RIGHT_KEY = 39;
     var DOWN_KEY = 40;
-    var HERO_MOVEMENT = 5;
+    var HERO_MOVEMENT = 3;
     
     var lastLoopRun = 0;
     
@@ -71,11 +71,11 @@
       function loop() {
         if (new Date().getTime() - lastLoopRun > 40) {
           handleControls();
-          showSprites()
+          showSprites();
         
           lastLoopRun = new Date().getTime();
         }
-        setTimeOut('loop();', 2);
+        setTimeout('loop();', 2);
       }
       
       document.onkeydown = function(evt) {
