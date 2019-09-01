@@ -30,16 +30,16 @@
       
       function toggleKey(keyCode, isPressed) {
         if (keyCode == LEFT_KEY) {
-          controller.left = true;
+          controller.left = isPressed;
         }
         if (keyCode == RIGHT_KEY) {
-          controller.right = true;
+          controller.right = isPressed;
         }
         if (keyCode == UP_KEY) {
-          controller.up = true;
+          controller.up = isPressed;
         }
         if (keyCode == DOWN_KEY) {
-          controller.down = true;
+          controller.down = isPressed;
         }
       }
       
@@ -51,16 +51,16 @@
       
       function handleControls() {
         if (controller.up) {
-          hero.y -= 5;
+          hero.y -= HERO_MOVEMENT;
         }
         if (controller.down) {
-          hero.y += 5;
+          hero.y += HERO_MOVEMENT;
         }
         if (controller.left) {
-          hero.x -= 5;
+          hero.x -= HERO_MOVEMENT;
         }
         if (controller.right) {
-          hero.x += 5;
+          hero.x += HERO_MOVEMENT;
         }
       }
       
