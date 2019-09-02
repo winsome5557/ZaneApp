@@ -64,7 +64,6 @@ var score = 0;
 
 var controller = new Object();
 var enemies = new Array();
-var interations = 0;
 
 function createSprite(element, x, y, w, h) {
   var result = new Object();
@@ -190,15 +189,6 @@ function updatePositions() {
 }
 
 function addEnemy() {
-  var interval = 5;
-  if (interations > 1500) {
-    interval = 5;
-  } else if (interations > 1000) {
-    interval = 20;
-  } else if (interations > 500){
-    interval = 50;
-  }
-  
   if (getRandom(interval) == 0) {
     var elementName = 'enemy' + getRandom(10000000);
     var enemy = createSprite(elementName, getRandom(450), -40, 35, 35);
