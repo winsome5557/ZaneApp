@@ -1,6 +1,5 @@
 <html>
 <head>
-<title>Shooter Game</title>
 <style>
 #hero {
   background: #ff0000;
@@ -28,12 +27,29 @@
   height: 35px;
   position: absolute;
 }
+#score {
+  color: #ffffff;
+  font-size: 18pt;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+#gameover {
+  color: #ff0000;
+  font-size: 20px;
+  position: absolute;
+  left: 160px;
+  top: 200px;
+  visibility: hidden;
+}
 </style>
 </head>
 <body>
 <div id="background"></div>
 <div id="hero"></div>
 <div id="laser"></div>
+<div id="score"></div>
+<div id="gameover">GAME OVER</div>
 <script>
 
 var LEFT_KEY = 37;
@@ -44,6 +60,7 @@ var SPACE_KEY = 32;
 var HERO_MOVEMENT = 3;
 
 var lastLoopRun = 0;
+var score = 0;
 
 var controller = new Object();
 var enemies = new Array();
@@ -122,12 +139,44 @@ function handleControls() {
   ensureBounds(hero);
 }
 
+function checkCollisions() {
+  for (var i = 0; i < enemies.length; i++) {
+    if (intersects(laser, enemies[i])) {
+      var element = document.getElementById(enemies[i].element);
+      element.style.visibility = 'hidden';
+      element.parentNode.removeChild(element);
+      enemies.splice(i, 1);
+      i--;
+      laser.y = -laser.h;
+      score += 1;
+    } else if (intersects(hero, enemies[i])) {
+      gameOver();
+      element.style.visibility = 'hidden';
+    } else if (enemies[i].y + enemies[i].h >= 500) {
+      var element = document.getElementById(enemies[i].element);
+      element.style.visibility = 'hidden';
+      element.parentNode.removeChild(element);
+      enemies.splice(i, 1);
+      i--;
+    }
+  }
+}
+
+function gameOver() {
+  var element = document.getElementById(hero.element);
+  element.style.visibility = 'hidden';
+  element = document.getElementById('gameover');
+  element.style.visibility = 'visible';
+}
+
 function showSprites() {
   setPosition(hero);
   setPosition(laser);
   for (var i = 0; i < enemies.length; i++) {
     setPosition(enemies[i]);
   }
+  var scoreElement = document.getElementById('score');
+  scoreElement.innerHTML = 'SCORE: ' + score;
 }
 
 function updatePositions() {
@@ -161,6 +210,7 @@ function loop() {
   if (new Date().getTime() - lastLoopRun > 40) {
     updatePositions();
     handleControls();
+    checkCollisions();
     
     addEnemy();
     
