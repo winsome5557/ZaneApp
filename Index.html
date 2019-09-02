@@ -7,28 +7,48 @@
         height: 20px;
         position: absolute;
       }
+      #background {
+        background: #000000;
+        width: 500px;
+        height: 500px;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+      }
+      #laser {
+        background: #00ff00;
+        width: 2px;
+        height: 50px;
+        position: absolute;
+      }
     </style>
   </head>
   <body>
+    <div id="background"></div>
     <div id="hero"></div>
+    <div id="laser"></div>
     <script>
     
     var LEFT_KEY = 37;
     var UP_KEY = 38;
     var RIGHT_KEY = 39;
     var DOWN_KEY = 40;
+    var SPACE_KEY = 32;
     var HERO_MOVEMENT = 3;
     
     var lastLoopRun = 0;
-    
-      var hero = new Object();
-      hero.element = 'hero';
-      hero.x = 250;
-      hero.y = 460;
-      hero.w = 20;
-      hero.h = 20;
       
       var controller = new Object();
+      
+      function createSprite(element, x, y, w, h) {
+        var result = new Object();
+        result.element = element;
+        result.x = x;
+        result.y = y;
+        result.w = w;
+        result.h = h;
+        return result;
+      }
       
       function toggleKey(keyCode, isPressed) {
         if (keyCode == LEFT_KEY) {
@@ -42,6 +62,9 @@
         }
         if (keyCode == DOWN_KEY) {
           controller.down = isPressed;
+        }
+        if (keyCode == SPACE_KEY) {
+          controller.space = isPressed;
         }
       }
       
@@ -79,17 +102,41 @@
         if (controller.right) {
           hero.x += HERO_MOVEMENT;
         }
+        if (controller.space && laser.y <= -120) {
+          laser.x = hero.x + 9;
+          laser.y = hero.y - laser.h;
+        }
         
         ensureBounds(hero);
       }
       
       function showSprites() {
         setPosition(hero);
+        setPosition(laser);
+      }
+      
+      function updatePositions() {
+        laser.y -= 12;
+      }
+      
+      function addEnemy() {
+        if (getRandom(50) == 0) {
+          var elementName = 'enemy' + getRandom()
+          var enemy = createSprite()
+        }
+      }
+      
+      function getRandom(maxSize) {
+        return parseInt(Math.random() * maxSize);
       }
       
       function loop() {
         if (new Date().getTime() - lastLoopRun > 40) {
+          updatePositions();
           handleControls();
+          
+          addEnemy();
+          
           showSprites();
         
           lastLoopRun = new Date().getTime();
@@ -104,6 +151,9 @@
       document.onkeyup = function(evt) {
         toggleKey(evt.keyCode, false);
       };
+      
+      var hero = createSprite('hero', 250, 460, 20, 20);
+      var laser = createSprite('laser', 0, -120, 20, 50);
       
       loop();
       
