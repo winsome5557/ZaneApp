@@ -1,5 +1,6 @@
 <html>
 <head>
+<title>Shooter Game</title>
 <style>
 #hero {
   background: #ff0000;
@@ -75,17 +76,21 @@ function toggleKey(keyCode, isPressed) {
   }  
 }
 
-function ensureBounds(sprite) {
+function intersects(a, b) {
+  return a.x < b.x + b.w && a.x + a.w > b.x && a.y < b.y + b.h && a.y + a.h > b.y; 
+} 
+
+function ensureBounds(sprite, ignoreY) {
   if (sprite.x < 20) {
     sprite.x = 20;
   }
-  if (sprite.y < 20) {
+  if (!ignoreY && sprite.y < 20) {
     sprite.y = 20;
   }
   if (sprite.x + sprite.w > 480) {
     sprite.x = 480 - sprite.w;
   }
-  if (sprite.y + sprite.h > 480) {
+  if (!ignoreY && sprite.y + sprite.h > 480) {
     sprite.y = 480 - sprite.h;
   }
 }
@@ -129,7 +134,7 @@ function updatePositions() {
   for (var i = 0; i < enemies.length; i++) {
     enemies[i].y += 4;
     enemies[i].x += getRandom(7) - 3;
-    ensureBounds(enemies[i]);
+    ensureBounds(enemies[i], true);
   }
   laser.y -= 12;
 }
