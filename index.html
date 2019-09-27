@@ -18,11 +18,8 @@
     
   </head>
   
-
- <header>
-      
+  <header>
     <div class="container">
-            
             <img src="download.jpg" width="98px" height="80px"/>
 
             <nav>
@@ -35,10 +32,13 @@
           </nav>
     </div>
 </header>
+<body>
+    <h1>ABOUT</h1>
+    <div id="text">This page is still in progress! I'm upgrading it by adding more items. Right now I have a game on this page. You can see it by clicking the game button on the top.</div>
+    <h1 id="title">HTML CODE</h1>
     
     
     
-    <body>
     
     <br>
     
@@ -163,87 +163,101 @@
 
 
 
-    
-
-  
-  <h1 id="title">HTML CODE</h1>
-  
     <style>
+     
+     
+     
+     
             @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
-body {
-	margin: 0;
-	background: #222;
-	font-family: 'Work Sans', sans-serif;
-	font-weight: 800;
+body{
+    margin:0;
+    background:#222;
+    font-family:'Work Sans', sans-serif;
+    font-weight:800;
     margin:0000;
-    background: url("image.jpg") no-repeat;
+    background:url("yellow.png");
 }
 
-.container {
-	width: 80%;
-	margin: 0 auto;
+.container{
+    width:80%;
+    margin:0 auto;
 }
 
-header {
-  background: #55d6aa;
+header{
+  background:#55d6aa;
 }
 
-header::after {
-  content: '';
-  display: table;
-  clear: both;
+header::after{
+  content:'';
+  display:table;
+  clear:both;
 }
 
-.logo {
-  float: left;
-  padding: 10px 0;
+.logo{
+  float:left;
+  padding:10px 0;
 }
 
-nav {
-  float: right;
+nav{
+  float:right;
 }
 
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+nav ul{
+  margin:0;
+  padding:0;
+  list-style:none;
 }
 
-nav li {
-  display: inline-block;
-  margin-left: 70px;
-  padding-top: 23px;
+nav li{
+  display:inline-block;
+  margin-left:70px;
+  padding-top:23px;
 
-  position: relative;
+  position:relative;
 }
 
-nav a {
-  color: #444;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 14px;
+nav a{
+  color:#444;
+  text-decoration:none;
+  text-transform:uppercase;
+  font-size:14px;
 }
 
-nav a:hover {
-  color: #000;
+nav a:hover{
+  color:#000;
 }
 
-nav a::before {
-  content: '';
-  display: block;
-  height: 5px;
-  background-color: #444;
+nav a::before{
+  content:'';
+  display:block;
+  height:5px;
+  background-color:#444;
 
-  position: absolute;
-  top: 0;
-  width: 0%;
+  position:absolute;
+  top:0;
+  width:0%;
 
-  transition: all ease-in-out 250ms;
+  transition:all ease-in-out 250ms;
 }
 
-nav a:hover::before {
-  width: 100%;
+nav a:hover::before{
+  width:100%;
 }
+
+h1{
+    font-size:500%;
+    text-align:center;
+    color:black;
+}
+
+h1:hover{
+    color:red;
+}
+    
+    
+ 
+    
+      
       
       
       body{
