@@ -10,7 +10,6 @@
 <header>
   <div class="container">
           <img src="download.jpg" width="98px" height="80px"/>
-
           <nav>
           <ul>
             <li><a href="paint.html">Paint</a></li>
@@ -20,7 +19,9 @@
           </ul>
         </nav>
   </div>
-	
+	<input id="search" type="text/text">
+	<br/>
+	<a id="a" href="https://www.google.com/search?q="+search.value>Search</a>
 </header>
 <body>
 	
@@ -98,7 +99,12 @@
             
                 #name:hover{
                   color:red;        
-                }	
+                }
+                #a{
+                 background-color:grey;
+                 color:white;
+                 text-decoration:none;
+                }
             
         </style>
     </body>
