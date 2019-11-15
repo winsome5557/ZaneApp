@@ -1,1 +1,11 @@
-
+#div{
+  font-family:arial;
+  background:url("code.png");
+  color:white;
+  height:250px;
+  text-align:center;
+  line-height:250px;
+}
+#des{
+  font-family:verdana;
+}
