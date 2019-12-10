@@ -82,8 +82,20 @@
     </style>
     <script>
       var login = function(){
-        var box = document.getElementById("login")
-        document.write(box.value)
+        var box = document.getElementById("login");
+        document.write("Hello " + box.value);
+        if(box.text=="Alfie"||"alfie"){
+          document.write("You are a leader of Trial Of The Champions.");
+      }elseif(box.text=="Zane"||"zane"){
+          document.write("You are a Publisher/Social Media Manager of Trial Of The Champions.");   
+      }elseif(box.text=="Lewis"||"lewis"){
+          document.write("You are a Deputy Leader (sometimes) of Trial Of The Champions.");   
+      }elseif(box.text=="Zak"||"zak"){
+          document.write("You are a Good Player of Trial Of The Champions.");    
+      }elseif(box.text=="Aria"||"aria"){
+          document.write("You are banned from Trial Of The Champions."); 
+      }else{
+          document.write("You do not have a rank"); 
       }  
     </script>
   </body>
