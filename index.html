@@ -9,6 +9,7 @@
     <header>
       <a href="help.html" id="link2">HELP</a><a href="g.html" id="link2">GAME</a><a href="chat.html" id="link2">CHAT</a>
     </header>
+    <input id="login" type="text" placeholder="Name Here"/><button onclick="login();">Enter</button>
     <h1 id="title">TRIAL OF THE CHAMPIONS</h1><img src="logototc.png" width="500px;" height="450px;"/><br/><br/><br/> Logo By Alfie Kilick<br/><br/><br/>
     <a href="help.html" id="link">Click here</a> to know about more.<br/><br/>
     <a href="g.html" id="link">Click here</a> to play the old version.<br/><br/>
@@ -79,5 +80,11 @@
         text-decoration:underline;
       }  
     </style>
+    <script>
+      var login = function(){
+        var box = document.getElementById("login")
+        document.write(login.value)
+      }  
+    </script>
   </body>
 </html>
