@@ -19,7 +19,7 @@
           <img src="gp.png"/>
           <form class="input-group">
             <input type="text" class="input-field" placeholder="Username" required/>
-            <input type="password" class="input-field" placeholder="Password" required/><br/>
+            <input type="password" class="input-field" placeholder="Password" required/>
             <input type="checkbox" class="check-box"><span>Remember Password<span>
             <button type="submit" class="submit-btn">Log In</button>
           </form>
@@ -84,9 +84,32 @@
       top: 180px;
       position: absolute;
     }  
+    .input-field{
+      width: 100%;
+      padding: 10px 0;
+      margin: 5px 0;
+      border-left: 0;
+      border-top: 0;
+      border-right: 0;
+      border-bottom: 1px solid #999;
+      outline: none;
+      background: transparent;
+    } 
+    .submit-btn{
+      width: 85%;
+      padding: 10px 30px;
+      cursor: pointer;
+      display: block;
+      margin: auto;
+      background: linear-gradient(to right, #ff105f,#ffad06);
+      border: 0;
+      outline: none;
+      border-radius: 30px;
+    }  
     .lb{
       background-color: white; 
       text-decoration: none;
+      padding: 14px 25px;
     }  
   </style>
  </body>
