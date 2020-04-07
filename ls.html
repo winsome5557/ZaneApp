@@ -10,8 +10,8 @@
       <div class="form-box">
         <div class="button-box">
           <div id="btn"></div>
-          <button type="button" class="toggle-btn">Login In</button>
-          <button type="button" class="toggle-btn">Sign Up</button>
+          <button type="button" class="toggle-btn" onclick="login()">Login In</button>
+          <button type="button" class="toggle-btn onclick"register()">Sign Up</button>
         </div>
         <div class="social-icons">
           <img src="fb.png"/>
@@ -135,5 +135,16 @@
       color: white;
     }  
   </style>
+  <script>
+    var x = document.getElementById("login");
+    var y = document.getElementById("register");
+    var z = document.getElementById("btn");
+                                         
+    function register(){
+      x.style.left = "-400px";
+      y.style.left = "50px";
+      z.style.left = "110px";
+    }                                     
+  </script>
  </body>
 </html>
