@@ -41,13 +41,18 @@ body {
   function signup()
   {
     var user = document.getElementById("username").value;
+    var pass = document.getElementById("password").value
    //alert(user);
    var trimmeduser = user.trim;
+    var trimmedpass = pass.trim;
     if(trimmeduser ==="" || user==="")
       //alert("user name can't be empty");
       document.getElementById("ErrorMsg").innerHTML = "User Name is Required";
       else
       document.getElementById("ErrorMsg").innerHTML = "Hello&nbsp" + user;
+    elseif(trimmedpass ==="" || pass==="")
+      //alert("password can't be empty");
+      document.getElementById("ErrorMsg").innerHTML = "Password is Required";
     
   };
   </script>
@@ -64,7 +69,7 @@ body {
 <input type="text" id="username" placeholder="Username" required/>
 <br/>
 <br/>
-<input type="password" placeholder="Password" required/>
+<input type="password" id="password" placeholder="Password" required/>
 <br/>
 <br/>
 <button onclick="signup()">Sign Up</button>
