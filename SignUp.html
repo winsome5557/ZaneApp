@@ -49,6 +49,11 @@ body {
       document.getElementById("ErrorMsg").innerHTML = "User Name is Required";
       else
       document.getElementById("ErrorMsg").innerHTML = "Hello&nbsp" + user;
+    var trimmedpwd = pass.trim;
+    if(trimmedpwd ==="" || pass==="")
+      //alert("user name can't be empty");
+      document.getElementById("ErrorMsg").innerHTML = "Password is Required";
+    
   };
   </script>
 <div class="topnav">
