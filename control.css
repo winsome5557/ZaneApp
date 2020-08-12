@@ -20,9 +20,3 @@ body {
   display:grid;
   justify-content:center;
 }
-
-canvas {
-
-  background-image: url("sky.png")
-
-}
