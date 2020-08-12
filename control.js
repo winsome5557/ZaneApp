@@ -4,7 +4,7 @@ window.onload = function() {
   var c = document.getElementById("cnv");
   var ctx = c.getContext("2d");
   var img = document.getElementById("img");
-  ctx.drawImage(img, 10, 10);
+  ctx.drawImage(img, 500, 500);
 }
 
 context = document.querySelector("canvas").getContext("2d");
