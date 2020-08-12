@@ -28,13 +28,13 @@ controller = {
 
     switch(event.keyCode) {
 
-      case 65:// left key
+      case 37:// left key
         controller.left = key_state;
       break;
-      case 32:// up key
+      case 38:// up key
         controller.up = key_state;
       break;
-      case 87:// right key
+      case 39:// right key
         controller.right = key_state;
       break;
 
