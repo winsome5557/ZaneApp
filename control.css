@@ -26,5 +26,6 @@ body {
 canvas {
 
   background-image: url("sky.png")
+  background-color: #111
 
 }
