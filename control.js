@@ -119,3 +119,7 @@ loop = function() {
 window.addEventListener("keydown", controller.keyListener)
 window.addEventListener("keyup", controller.keyListener);
 window.requestAnimationFrame(loop);
+
+function jump(){
+ controller.up = key_state; 
+}  
