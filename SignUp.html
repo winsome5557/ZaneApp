@@ -6,9 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
-  margin: 0;
+  margin:5px;
   font-family: Arial, Helvetica, sans-serif;
-  background-image: url("Background.png");
+  background-color: white;
 }
 
 .topnav {
@@ -34,9 +34,33 @@ body {
   background-color: #4CAF50;
   color: white;
 }
-  h1{
-   color:white; 
-  }  
+.frame{
+  background-color: black;
+  height:875px;
+  width:89.4%;
+  border: black 25px solid;
+}
+h1{
+  color:white;
+}
+.submitt{
+  cursor:no-drop;
+}
+.bar{
+  background-color: lightblue;
+  float: right;
+  width: 150px;
+  height:925px;
+  top: 5px;
+  position:absolute;
+  right: 7.5px;
+  float:right;
+} 
+a{
+  text-align: center;
+  text-decoration:none;
+  color:grey;
+}
 </style>
 </head>
 <body>
@@ -61,7 +85,7 @@ body {
     
   };
   </script>
-<div class="topnav">
+<!--<div class="topnav">
   <a href="Index.html">Home</a>
   <a class="active" href="SignUp.html">Sign Up</a>
   <img src="Logo.png" height="45px;">
@@ -76,19 +100,34 @@ function googleTranslateElementInit() {
   new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
 }
 </script>
-
-  <h1>Sign Up</h1>
-  
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-<form action="gp.html"/>
+-->
+<div id="Frame" class="frame">
+  <form action="gp.html">
+    <img src="Logo.png" width="450px;" height="100px;">
+    <h1>Sign Up</h1>
 <input type="text" id="username" placeholder="Username" required/>
 <br/>
 <br/>
 <input type="password" id="password" placeholder="Password" required/>
+
 <br/>
 <br/>
-<input  type="submit" disabled/>
+<input  type="submit" class="submitt" disabled/>
 <p id="ErrorMsg" ></p>
   </form>
+  
+</div>
+<div class="bar">
+  <br/>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Index.html">Home</a>
+  _________________
+  <br/>
+  <br/>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="SignUp.html">Sign Up</a>
+  <br/>
+  _________________
+</div>
+<!--<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>-->
+
 </body>
 </html>
