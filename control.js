@@ -113,7 +113,6 @@ loop = function() {
 
   // call update when the browser is ready to draw again
   window.requestAnimationFrame(loop);
-
 };
 
 window.addEventListener("keydown", controller.keyListener)
