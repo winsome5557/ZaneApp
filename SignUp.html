@@ -61,6 +61,9 @@ a{
   text-decoration:none;
   color:grey;
 }
+.textt{
+  color:white;
+}
 </style>
 </head>
 <body>
@@ -102,9 +105,18 @@ function googleTranslateElementInit() {
 </script>
 -->
 <div id="Frame" class="frame">
-  <form action="gp.html">
-    <img src="Logo.png" width="450px;" height="100px;">
-    <h1>Sign Up</h1>
+<img src="Logo.png" width="450px;" height="100px;">
+<h1>Sign Up</h1>
+
+<form action="gp.html" method="get">
+  <label class="textt" for="username">Username:</label>
+  <input type="text" id="username" name="username" required><br/><br/>
+  <label for="password" class="textt">Password:</label>
+  <input type="password" id="password" name="password" required /><br/<br/><br/>
+  <input type="submit" value="Create Account">
+</form>
+<!-- 
+<form action="gp.html" method="get" target="_blank">
 <input type="text" id="username" placeholder="Username" required/>
 <br/>
 <br/>
@@ -112,10 +124,10 @@ function googleTranslateElementInit() {
 
 <br/>
 <br/>
-<input  type="submit" class="submitt" disabled/>
+<input type="submit" value= "SignIn"/>
+
 <p id="ErrorMsg" ></p>
-  </form>
-  
+  </form> -->
 </div>
 <div class="bar">
   <br/>
