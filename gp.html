@@ -55,9 +55,12 @@ a{
 .game:hover{
   text-decoration:underline;
 }
+.te{
+  color:white;
+}
 </style>
 </head>
-<body>
+ <body onload="onLoad();">
 
 <!--<div class="topnav">
   <a href="Index.html">Home</a>
@@ -68,13 +71,30 @@ a{
 <br/>
 
   <div id="google_translate_element"></div>
-
-<script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
-}
-</script>
 -->
+<script>
+  function onLoad()
+  {var te = document.getElementById("Username")
+  te.value=username.value
+
+
+}
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+var sn = getParameterByName('serialNumber');
+
+document.getElementById("te").innerHTML = sn;
+
+</script>
+
 <div class="bar">
   <br/>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Index.html">Home</a>
@@ -93,6 +113,24 @@ function googleTranslateElementInit() {
 <!--<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>-->
 
 <img src="Logo.png" width="450px;" height="100px;"/>
+<br/>
+<br/>
+<h1 class="te" id="te"></h1>
+<script>
+  function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+var sn = getParameterByName('serialNumber');
+
+document.getElementById("te").innerHTML = sn;
+</script>
 <br/>
 <br/>
 <a class="game" href="control.html">TestGame</a>
