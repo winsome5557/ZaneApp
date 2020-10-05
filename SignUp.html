@@ -72,6 +72,7 @@ a{
   {
     var user = document.getElementById("username").value;
     var pass = document.getElementById("password").value;
+    var box_user = document.getElementById("username")
    //alert(user);
    var trimmeduser = user.trim;
    var trimmedpwd = pass.trim;
@@ -81,7 +82,7 @@ a{
       document.getElementById("ErrorMsg").innerHTML = "User Name is Required";
     else
       document.getElementById("ErrorMsg").innerHTML = "Hello&nbsp" + user;
-   
+      box_user.value = "Checking Database"
     if(trimmedpwd ==="" || pass==="")
       //alert("user name can't be empty");
       document.getElementById("ErrorMsg").innerHTML = "Password is Required";
