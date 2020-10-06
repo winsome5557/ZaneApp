@@ -9,14 +9,14 @@ window.onload = function() {
 
 context = document.querySelector("canvas").getContext("2d");
 
-context.canvas.height = 180;
-context.canvas.width = 320;
+context.canvas.height = 180; //180
+context.canvas.width = 500;  //320
 
 rectangle = {
 
-  height:32,
+  height:32, //32
   jumping:true,
-  width:32,
+  width:32, //32
   x:144, // center of the canvas
   x_velocity:0,
   y:0,
@@ -98,13 +98,13 @@ loop = function() {
 
   }
 
-  context.fillStyle = "#202020";
-  context.fillRect(0, 0, 320, 180);// x, y, width, height
-  context.fillStyle = "#ff0000";// hex for red
+  context.fillStyle = "#87ceeb"; //#202020
+  context.fillRect(0, 0, 320, 180);// x, y, width, height. 0, 0, 320, 180.
+  context.fillStyle = "#ffffff";// hex for red
   context.beginPath();
   context.rect(rectangle.x, rectangle.y, rectangle.width, rectangle.height);
   context.fill();
-  context.strokeStyle = "#202830";
+  context.strokeStyle = "ffffff";
   context.lineWidth = 4;
   context.beginPath();
   context.moveTo(0, 164);
