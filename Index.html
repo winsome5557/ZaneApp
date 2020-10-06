@@ -52,7 +52,18 @@ a{
 </style>
 </head>
 <body>
-
+  <button type="button" onclick="changeBackgroundColorToWhite()">Light Mode</button>
+  <button type="button" onclick="changeBackgroundColorToBlack()">Dark Mode</button>
+  <script>
+  function changeBackgroundColorToWhite()
+  {   
+  document.body.style.backgroundColor= "white";
+  }
+  function changeBackgroundColorToBlack()
+  {   
+  document.body.style.backgroundColor= "Black";
+  }
+  </script>
 <!--<div class="topnav">
   <a href="Index.html">Home</a>
   <a class="active" href="SignUp.html">Sign Up</a>
