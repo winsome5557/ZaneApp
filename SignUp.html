@@ -113,7 +113,19 @@ function googleTranslateElementInit() {
   <label for="password" class="textt">Password:</label>
   <input type="password" id="password" name="password" required /><br/<br/><br/>
   <input type="submit" class="submitt" value="Create Account" disabled>
-</form>
+</form><br/>
+<button type="button" onclick="changeBackgroundColorToWhite()">Light Mode</button>
+<button type="button" onclick="changeBackgroundColorToBlack()">Dark Mode</button>
+<script>
+function changeBackgroundColorToWhite()
+{   
+document.body.style.backgroundColor= "white";
+}
+function changeBackgroundColorToBlack()
+{   
+document.body.style.backgroundColor= "Black";
+}
+</script>
 <!-- 
 <form action="gp.html" method="get" target="_blank">
 <input type="text" id="username" placeholder="Username" required/>
