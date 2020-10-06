@@ -120,6 +120,20 @@ document.getElementById("te").innerHTML = sn;
 <img src="Logo.png" width="450px;" height="100px;"/>
 <br/>
 <br/>
+<button type="button" onclick="changeBackgroundColorToWhite()">Light Mode</button>
+<button type="button" onclick="changeBackgroundColorToBlack()">Dark Mode</button>
+<script>
+function changeBackgroundColorToWhite()
+{   
+document.body.style.backgroundColor= "white";
+}
+function changeBackgroundColorToBlack()
+{   
+document.body.style.backgroundColor= "Black";
+}
+</script>
+<br/>
+<br/>
 <h1 class="te" id="te"></h1>
 <script>
   function getParameterByName(name, url) {
