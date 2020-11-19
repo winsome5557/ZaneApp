@@ -63,6 +63,16 @@ a{
   width:75px;
   text-align: center;
 }
+   .copyright{
+    color: darkmagenta;
+}
+.copyright:hover{
+    text-decoration: underline;
+    color: blue;
+}
+ .copyright_text{
+    color: white;
+ } 
 </style>
 </head>
  <body onload="onLoad();">
@@ -99,7 +109,9 @@ var sn = getParameterByName('serialNumber');
 document.getElementById("te").innerHTML = sn;
 
 </script>
-
+<br/>
+<br/>
+<img src="Favicon.png" width="50px;"/><address class="copyright_text">Copyright © 2020 <a class="copyright" href="mailto:zane.sarfraz@gmail.com">Zane Sarfraz</a></address>
 <div class="bar">
   <br/>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Index.html">Home</a>
